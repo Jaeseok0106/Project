@@ -11,7 +11,7 @@ import lombok.Data;
 public class UsersSignForm {
 	
 	@NotBlank
-	@Pattern(regexp = "/^[A-Za-z]{1}[A-Za-z0-9]{5,14}$/")
+	@Pattern(regexp="")
 	private String id;
 	
 	@NotBlank
