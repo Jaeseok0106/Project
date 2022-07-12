@@ -50,7 +50,7 @@ a {
   <header class="blog-header py-3" style = "height : 230px;">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="text-center">
-      	<img src = "./resources/logo.png" style = "height:150px;"/>
+      	<img src = "${classpath}/gallery/resources/logo.png" style = "height:150px;"/>
       </div>
     </div>
 <br><br><br>
@@ -131,19 +131,26 @@ a {
 <!-- main 안에다가 주 내용 작성할것 -->
 <main class = "container p-5">
 	<div style = "border-top: 0.3rem dotted black; border-bottom: 0.3rem dotted black;">
-		<h5>게시판 제목</h5>
+		<h5>아티스트 업로드</h5>
 	</div>
-	<div class = "row py-4">
-		<form>
-			<div class = "col">
-				<input class="form-control" type="text" placeholder="제목" aria-label="default input example"><br><br>
-				<textarea name = "text" class="form-control" id="editor" rows="30" cols = "50"></textarea> <br><br>
-			</div>
-			<div class = "col text-end">
-				<button type="button" class="btn btn-outline-primary">작성 완료</button>
-				<button type="button" class="btn btn-outline-danger">취소</button>						
-			</div>
-		</form>
+	<div class = "container">
+		<div class = "row mb-2 py-4">
+			<form class = "row mb-2" id = "frmAdd" method = "POST" action = "./asd" enctype="multipart/form-data">
+				<div class = "col-6">
+						<input class="form-control" name = "name" type="text" placeholder="아티스트 이름" aria-label="default input example"><br><br>
+						<textarea name = "career" class="form-control" rows = "3" cols = "5" placeholder="아티스트 커리어"></textarea> <br><br>
+						<textarea name = "direction" class="form-control" id="editor" rows="30" cols = "50" placeholder="아티스트의 방향성에 대해 입력해주세요"></textarea> <br><br>
+					<div class = "text-end">
+						<button type="submit" class="btn btn-outline-primary">작성 완료</button>
+						<button type="button" class="btn btn-outline-danger">취소</button>						
+					</div>
+				</div>
+				<div class = "col-6">
+					  <label for="formFile" class="form-label">아티스트의 사진을 업로드해주세요</label>
+					  <input class="form-control" type="file" id="formFile" name = "file">
+				</div>
+			</form>
+		</div>
 	</div>
 </main>
 
@@ -206,8 +213,8 @@ $(document)
 	})	
 })
 </script>
-<script src="./resources/editor/ckeditor.js"></script>
-<script src="./resources/editor/translations/ko.js"></script>
+<script src="${classpath}/gallery/resources/editor/ckeditor.js"></script>
+<script src="${classpath}/gallery/resources/editor/translations/ko.js"></script>
 <script>
 ClassicEditor.create( document.querySelector( '#editor' ) );
 </script>
