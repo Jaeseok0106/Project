@@ -58,12 +58,13 @@ public class UserController {
 	}
 	
 	@RequestMapping("/signin")
-	public String viewSignin(@ModelAttribute("user") Users user) {
+	public String viewSignin(@ModelAttribute("user") UsersSignForm user) {
 		return "users/signin";
 	}
 	
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
-	public String doSignin(@Validated @ModelAttribute("user") UsersSignForm form, BindingResult bindingResult) {
+	public String doSignin(@Validated @ModelAttribute("user") UsersSignForm form, BindingResult bindingResult,
+							Model model) {
 		log.info("넘어온 값들 = {}", form);
 		
 		if (bindingResult.hasErrors())
@@ -71,7 +72,19 @@ public class UserController {
 			log.info("발생한 에러  = {}", bindingResult.getFieldError());
 			return "users/signin";
 		}
-		return "redirect:/";
+		Users checkId = userService.checkId(form.getId());
+		if (checkId != null)
+		{
+			model.addAttribute("overlap", "이미 존재하는 아이디입니다.");
+			return "users/signin";
+		}
+		if (!form.getPassword().equals(form.getPasswordCheck()))
+		{
+			model.addAttribute("passwordError", "비밀번호가 일치하지 않습니다.");
+			return "users/signin";
+		}
+		userService.addUsers(form);
+		return "redirect:/login";
 	}
 
 }

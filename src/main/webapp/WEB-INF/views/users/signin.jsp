@@ -132,6 +132,7 @@ a {
 						<label>ID</label> 
 						<form:input path ="id" class = "form-control" />
 						<form:errors path = "id" class = "FieldError" />
+						<label class = "FieldError">${overlap} </label>
 					</p>
 					<p>
 						<label>비밀번호</label> 
@@ -139,8 +140,15 @@ a {
 					    <form:errors path = "password" class = "FieldError"/>
 					</p>
 					<p>
-						<label>비밀번호 확인</label> <input type="password" id="pw3"
-							name="pw3" class = "form-control" required>
+						<label>비밀번호 확인</label> 
+						<form:password path = "passwordCheck" class = "form-control" />
+						<form:errors path = "passwordCheck"/>
+						<label class = "FieldError">${passwordError}</label>
+					</p>
+					<p>
+						<label>이름</label> 
+						<form:input path ="name" class = "form-control" />
+						<form:errors path = "name" class = "FieldError" />
 					</p>
 					<p>
 						<label>E-mail</label> 
@@ -149,7 +157,7 @@ a {
 					</p>
 					<p>
 						<label>우편번호</label> 
-						<form:input path = "postcode" class="form-control" id="sample6_postcode" readonly ="true" /> 
+						<form:input path = "postcode" class="form-control" id="sample6_postcode" readonly ="true" placeholder="우편번호"/> 
 						<form:errors path = "postcode" class = "FieldError"/>
 							<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
 					</p>
@@ -164,8 +172,9 @@ a {
 						<label>상세주소</label> <br>
 						<form:input path = "dtaddress" id="sample6_detailAddress"
 							placeholder="상세주소"/>
-						<input type="text"	id="sample6_extraAddress" placeholder="참고항목" readonly> <br>
 						<form:errors path = "dtaddress" class = "FieldError"/> 
+						<form:input path = "refAddress"	id="sample6_extraAddress" placeholder="참고항목" readonly = "true"/>
+						<form:errors path = "refAddress" class ="FieldError" />
 					</p>
 					<p>
 						<label>전화번호</label>
