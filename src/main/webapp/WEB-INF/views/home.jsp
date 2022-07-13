@@ -30,7 +30,7 @@ font-size: 55px;
 </style>
 <body>
 <div class="container">
-  <header class="blog-header py-3" style = "height : 230px;">
+<header class="blog-header py-3" style = "height : 230px;">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="text-center">
         <a class="blog-header-logo text-dark" href="#"><p id = main>Gallary name</p></a>
@@ -66,7 +66,7 @@ font-size: 55px;
 	    <a class="nav-link" id = "nav4">Post</a>
 	    	<ul class="nav justify-content-end" style = "display : none;" id = "none2">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="#">Review</a>
+			    <a class="nav-link" aria-current="page" href="review">Review</a>
 			  </li>
 			  <li class="nav-item">
 			    <a class="nav-link" href="#">Q&A</a>
@@ -108,7 +108,7 @@ font-size: 55px;
 	  </li>
 	</ul>
   </div>
-  </header>
+</header>
 </div>
 <br><br>
 
