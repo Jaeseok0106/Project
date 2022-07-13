@@ -142,7 +142,7 @@ a {
 					<p>
 						<label>비밀번호 확인</label> 
 						<form:password path = "passwordCheck" class = "form-control" />
-						<form:errors path = "passwordCheck"/>
+						<form:errors path = "passwordCheck" class = "FieldError"/>
 						<label class = "FieldError">${passwordError}</label>
 					</p>
 					<p>
