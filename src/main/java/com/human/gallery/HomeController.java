@@ -35,5 +35,9 @@ public class HomeController {
 		
 		return "home";
 	}
+	@RequestMapping("/write")
+	public String viewWrite() {
+		return "writePost";
+	}
 	
 }

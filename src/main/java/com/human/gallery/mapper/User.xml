@@ -7,4 +7,14 @@
 <select id = "findById" resultType = "com.human.gallery.domain.user.Users">
 	select * from Users where id = #{param1}
 </select>
+
+<insert id = "addUser">
+	insert into Users values (Users_SEQ.nextval, #{param1}, #{param2}, '유저')
+</insert>
+<select id = "findNumById" resultType = "Integer">
+	select usernum from users where id = #{param1}
+</select>
+<insert id = "addDetail">
+	insert into userDetail values (#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7})
+</insert>
 </mapper>

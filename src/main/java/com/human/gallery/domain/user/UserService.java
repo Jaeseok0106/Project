@@ -30,5 +30,24 @@ public class UserService {
 			return null;
 		}
 	}
+	public Users checkId(String id) {
+		
+		Users user = userRepository.findById(id);
+		
+		if (user == null) {
+			return null;
+		}
+		else {
+			return user;
+		}
+	}
+
+	public void addUsers(UsersSignForm user) {
+		log.info("넘어온 값 = {}", user);
+		userRepository.addUser(user.getId(), user.getPassword());
+		Integer number = userRepository.findNumById(user.getId());
+		String address = user.getAddress() + " " + user.getRefAddress();
+		userRepository.addDetail(number, user.getName(),user.getMobile(), address ,user.getDtaddress(), user.getEmail(), user.getPostcode());
+	}
 	
 }

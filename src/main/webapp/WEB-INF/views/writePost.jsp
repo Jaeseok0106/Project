@@ -39,7 +39,10 @@ body {
     font-style: normal;
 }
 a {
-text-decoration-line:none;
+	text-decoration-line:none;
+}
+.ck-editor__editable {
+	height : 600px;
 }
 </style>
 <body>
@@ -134,7 +137,7 @@ text-decoration-line:none;
 		<form>
 			<div class = "col">
 				<input class="form-control" type="text" placeholder="제목" aria-label="default input example"><br><br>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="30" cols = "50"></textarea> <br><br>
+				<textarea name = "text" class="form-control" id="editor" rows="30" cols = "50"></textarea> <br><br>
 			</div>
 			<div class = "col text-end">
 				<button type="button" class="btn btn-outline-primary">작성 완료</button>
@@ -202,5 +205,10 @@ $(document)
 		$("#none3").css("display", "none");
 	})	
 })
+</script>
+<script src="./resources/editor/ckeditor.js"></script>
+<script src="./resources/editor/translations/ko.js"></script>
+<script>
+ClassicEditor.create( document.querySelector( '#editor' ) );
 </script>
 </html>

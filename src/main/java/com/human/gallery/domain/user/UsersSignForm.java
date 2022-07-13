@@ -11,18 +11,26 @@ import lombok.Data;
 public class UsersSignForm {
 	
 	@NotBlank
-	@Pattern(regexp="")
+	@Pattern(regexp="^[a-z]{1}[a-z0-9]{5,12}$")
 	private String id;
 	
 	@NotBlank
 	@Pattern(regexp="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$")
 	private String password;
+	@NotBlank
+	@Pattern(regexp="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$")
+	private String passwordCheck;
 	
+	@NotBlank
+	@Pattern(regexp="^[ㄱ-ㅎ가-힣]*$")
+	private String name;
 	@NotBlank
 	private String address;
 	
 	@NotBlank
 	private String dtaddress;
+	@NotBlank
+	private String refAddress;
 	@Email
 	private String email;
 	
