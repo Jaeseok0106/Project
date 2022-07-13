@@ -55,20 +55,22 @@ text-decoration-line:none;
 	<ul class="nav justify-content-center">
 	  <li class="nav-item mx-5">
 	    <a class="nav-link active p-7" aria-current="page" href="#" id = "nav1">About us</a>
-			<ul class="nav justify-content-end" style = "display : none;" id = "none1">
-			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="#">Active</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link">Disabled</a>
-			  </li>
-			</ul>
+		    <div>
+				<ul class="nav justify-content-end" style = "display : none;" id = "none1">
+				  <li class="nav-item">
+				    <a class="nav-link" aria-current="page" href="#">Active</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link">Disabled</a>
+				  </li>
+				</ul>
+			</div>
 	  </li>
 	  <li class="nav-item mx-5">
 	    <a class="nav-link" href="#" id = "nav2">exhibition</a>

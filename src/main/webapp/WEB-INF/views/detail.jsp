@@ -102,7 +102,7 @@ prefix="c" %> <%@ page session="false" %>
                   <a class="nav-link" aria-current="page" href="#">Review</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Q&A</a>
+                  <a class="nav-link" href="qna">Q&A</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">FAQ</a>
@@ -163,15 +163,15 @@ prefix="c" %> <%@ page session="false" %>
           "
         >
           <p class="text-start">
-            게시판 제목
-            <span style="float: right"> 날짜 </span>
+            ${qdto.title}
+            <span style="float: right"> ${qdto.postdate} </span>
           </p>
         </div>
         <div class="col-12" style="border-bottom: 0.1rem solid black">
           <p class="text-start">
-            글 쓴 사람
+            ${qdto.user_id}
             <span style="float: right">
-              조회수 : 222 추천수 : 222 댓글 : 222
+              조회수 : ${qdto.views}  추천수 : ${qdto.heart}  댓글 : 222
             </span>
           </p>
         </div>
@@ -179,17 +179,7 @@ prefix="c" %> <%@ page session="false" %>
         <p></p>
         <div class="col-12">
           <p>
-            난 이별을 알지 못한다 하지만 이 시를 읽을 때면 이별이 얼마나 사람을
-            미치게 하는지 조금은 알 것 같다 사랑을 다해 사랑을 하느라고 정작
-            해야 할 말이 남아 있었음을 알았을 때 당신은 이미 남의 사람이 되어
-            있었다 불러야 할 뜨거운 노래를 가슴으로 죽이고 당신은 멀리
-            이루어지고 있었다 하마 곱스런 눈 웃음이 사라지기 전 두고두고
-            아름다움으로 잊어 달라지만 남자에게서 여자는 기쁨 아니면 슬픔 다섯
-            손가락 끝을 잘라 핏물로 쓴 글이여 혼자라도 외롭지 않을 밤에
-            울어보리라 울어서 멍든 눈 우김으로 미워서 미워지도록 사랑하리라 한
-            잔은 떠나버린 너를 위하여 한 잔은 이미 초라해진 나를 위하여 또 한
-            잔은 너와의 영원한 사랑을 위해 그리고 마지막 한 잔은 미리 알고
-            정하신 하느님을 위하여
+            
           </p>
         </div>
         <div class="col-3 text-start">

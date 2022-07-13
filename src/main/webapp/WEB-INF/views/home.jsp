@@ -38,23 +38,23 @@ font-size: 55px;
     </div>
 <br><br><br>
 <div class="nav-scroller mb-7" id = "list">
-	<ul class="nav justify-content-center">
+	<ul class="nav justify-content-center" style = "display:block;">
 	  <li class="nav-item mx-5">
 	    <a class="nav-link active p-7" aria-current="page" href="#" id = "nav1">About us</a>
-			<ul class="nav justify-content-end" style = "display : none;" id = "none1">
-			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="#">Active</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#">Link</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link">Disabled</a>
-			  </li>
-			</ul>
+				<ul class="nav justify-content-end" style = "display : none;" id = "none1">
+				  <li class="nav-item">
+				    <a class="nav-link" aria-current="page" href="#">Active</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Link</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link">Disabled</a>
+				  </li>
+				</ul>
 	  </li>
 	  <li class="nav-item mx-5">
 	    <a class="nav-link" href="#" id = "nav2">exhibition</a>
@@ -69,7 +69,7 @@ font-size: 55px;
 			    <a class="nav-link" aria-current="page" href="#">Review</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#">Q&A</a>
+			    <a class="nav-link" href="qna">Q&A</a>
 			  </li>
 			  <li class="nav-item">
 			    <a class="nav-link" href="#">FAQ</a>
