@@ -27,6 +27,9 @@ font-size: 55px;
     font-size: 20px;
     font-size: 1.25rem;
   }
+ #detail {
+ 	font-size: 0.7rem;
+ }
 </style>
 <body>
 <div class="container">
@@ -43,16 +46,16 @@ font-size: 55px;
 	    <a class="nav-link active p-7" aria-current="page" href="#" id = "nav1">About us</a>
 				<ul class="nav justify-content-end" style = "display : none;" id = "none1">
 				  <li class="nav-item">
-				    <a class="nav-link" aria-current="page" href="#">Active</a>
+				    <a class="nav-link" aria-current="page" href="#" id = "detail">Active</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Link</a>
+				    <a class="nav-link" href="#" id = "detail">Link</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">Link</a>
+				    <a class="nav-link" href="#" id = "detail">Link</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link">Disabled</a>
+				    <a class="nav-link" id = "detail">Disabled</a>
 				  </li>
 				</ul>
 	  </li>
@@ -66,16 +69,17 @@ font-size: 55px;
 	    <a class="nav-link" id = "nav4">Post</a>
 	    	<ul class="nav justify-content-end" style = "display : none;" id = "none2">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="review">Review</a>
+			    <a class="nav-link" aria-current="page" href="./review" id = "detail">Review</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="qna">Q&A</a>
+			    <a class="nav-link" href="qna" id = "detail">Q&A</a>
+
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#">FAQ</a>
+			    <a class="nav-link" href="#" id = "detail">FAQ</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link">Disabled</a>
+			    <a class="nav-link" id = "detail">Disabled</a>
 			  </li>
 			</ul>
 	  </li>
@@ -84,22 +88,22 @@ font-size: 55px;
 	    	<ul class="nav justify-content-end" style = "display : none;" id = "none3">
 	    	<c:if test = "${userinfo == null}">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="#">Login</a>
+			    <a class="nav-link" aria-current="page" href="./login" id = "detail">Login</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#">Sign in</a>
+			    <a class="nav-link" href="#" id = "detail">Sign in</a>
 			  </li>
 			</c:if>
 			<c:if test = "${userinfo != null }">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="#">Logout</a>
+			    <a class="nav-link" aria-current="page" href="./logout" id = "detail">Logout</a>
 			  </li>
 			</c:if>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#">My page</a>
+			    <a class="nav-link" href="#" id = "detail">My page</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link">Disabled</a>
+			    <a class="nav-link" id = "detail">Disabled</a>
 			  </li>
 			</ul>
 	  </li>

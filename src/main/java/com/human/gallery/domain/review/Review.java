@@ -14,3 +14,4 @@ public class Review {
 	private int views;
 	private String user_id;
 }
+

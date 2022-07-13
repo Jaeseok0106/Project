@@ -49,7 +49,6 @@ text-decoration-line:none;
     border-left: 0 none;
     padding: 4px 9px 4px 9px;
 }
-
 .input-group-addon .glyphicon-calendar:before, .input-group-text .datePicker-calendar:before{
     content: " ";
     background: url(/assets/images/buttons/btn_calendar.png) center center no-repeat;
@@ -59,12 +58,10 @@ text-decoration-line:none;
     overflow: hidden;
 }
 div {white-space: nowrap;}
-
 #btn01{
     height:auto;
     vertical-align: middle;
 }
-
 #date1,#date2{
     width:130px;
     height:38px;
@@ -297,7 +294,6 @@ $(document)
         
         },
         close: function() {
-
         }
     })
 })

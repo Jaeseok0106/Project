@@ -148,94 +148,6 @@ text-decoration-line:none;
 					<th>추천순</th>
 				</tr>
 	
-				<!-- <tr class = "p-5">
-					<td class = "text-center">1</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">2</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">3</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">4</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">5</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">6</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">7</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">8</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">9</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">10</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr>
-				<tr>
-					<td class = "text-center">11</td>
-					<td class = "text-center">여기서부터 디비에서 불러온 제목</td>
-					<td class = "text-center">디비 글쓴이</td>
-					<td class = "text-center">디비 날짜</td>
-					<td class = "text-center">조회수</td>
-					<td class = "text-center">추천 50개</td>
-				</tr> -->
 			</table>
 			<!-- 여기에 이제 1페이지부터 클릭할 수 있는거 넣을 생각 -->
 			
@@ -318,7 +230,6 @@ $(document)
 		$("#none2").css("display", "none");
 		$("#none3").css("display", "none");
 	})
-
 function showReview() {
 		$.ajax({
 			url:'reviewList',

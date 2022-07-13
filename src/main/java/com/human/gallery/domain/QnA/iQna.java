@@ -3,9 +3,10 @@ package com.human.gallery.domain.QnA;
 import java.util.ArrayList;
 
 public interface iQna {
-	ArrayList<qnaDTO> qnalist(); //qna Å×ÀÌºí ¸®½ºÆ®
-	int addqna(String title, String content, int writer); //qna°Ô½ÃÆÇ add
-	int upqna(String title, String content, int writer, int id); //°Ô½ÃÆÇÅ×ÀÌºí update
+	ArrayList<qnaDTO> qnalist(); //qna í…Œì´ë¸” ë¦¬ìŠ¤íŠ¸
+	int addqna(String title, String content, int writer); //qnaê²Œì‹œíŒ add
+	int upqna(String title, String content, int writer, int id); //ê²Œì‹œíŒí…Œì´ë¸” update
 	int delqna(int id); //delete
 	qnaDTO selqna(int id);
 }
+
