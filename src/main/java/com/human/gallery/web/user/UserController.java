@@ -28,10 +28,21 @@ public class UserController {
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(HttpSession session, Model model) {
+		
+		model.addAttribute("userinfo", session.getAttribute("userId"));
+		return "home";
+	}
 
 	@RequestMapping("/login")
 	public String viewLogin(@ModelAttribute("user") Users user) {
 		return "users/login";
+	}
+	@RequestMapping("/logout")
+	public String doLogout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)

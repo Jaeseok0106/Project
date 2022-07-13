@@ -5,15 +5,12 @@
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 	<title>Home</title>
 </head>
 <style>
-#main {
-font-size:75px;
-}
-.carousel-item, .carousel-inner {
-height:568px;
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 .nav-item{
 list-style-type:none;
@@ -26,38 +23,56 @@ font-size: 55px;
     padding: 0 0.3125rem;
     font-size: 20px;
     font-size: 1.25rem;
-  }
- #detail {
- 	font-size: 0.7rem;
- }
+}
+.page-title {
+	border-top: 10px solid black;
+	border-bottom : 10px solid black;
+	margin-bottom : 2rem;
+}
+.page-title h1{
+	padding : 2rem;
+	text-align : center;
+}
+body {
+	font-family : LeeSeoyun;
+}
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+text-decoration-line:none;
+}
 </style>
 <body>
 <div class="container">
   <header class="blog-header py-3" style = "height : 230px;">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="text-center">
-        <a class="blog-header-logo text-dark" href="#"><p id = main>Gallary name</p></a>
+      	<img src = "./resources/logo.png" style = "height:150px;"/>
       </div>
     </div>
 <br><br><br>
 <div class="nav-scroller mb-7" id = "list">
-	<ul class="nav justify-content-center" style = "display:block;">
+	<ul class="nav justify-content-center">
 	  <li class="nav-item mx-5">
 	    <a class="nav-link active p-7" aria-current="page" href="#" id = "nav1">About us</a>
-				<ul class="nav justify-content-end" style = "display : none;" id = "none1">
-				  <li class="nav-item">
-				    <a class="nav-link" aria-current="page" href="#" id = "detail">Active</a>
-				  </li>
-				  <li class="nav-item">
-				    <a class="nav-link" href="#" id = "detail">Link</a>
-				  </li>
-				  <li class="nav-item">
-				    <a class="nav-link" href="#" id = "detail">Link</a>
-				  </li>
-				  <li class="nav-item">
-				    <a class="nav-link" id = "detail">Disabled</a>
-				  </li>
-				</ul>
+			<ul class="nav justify-content-end" style = "display : none;" id = "none1">
+			  <li class="nav-item">
+			    <a class="nav-link" aria-current="page" href="#">Active</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Link</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Link</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link">Disabled</a>
+			  </li>
+			</ul>
 	  </li>
 	  <li class="nav-item mx-5">
 	    <a class="nav-link" href="#" id = "nav2">exhibition</a>
@@ -69,16 +84,16 @@ font-size: 55px;
 	    <a class="nav-link" id = "nav4">Post</a>
 	    	<ul class="nav justify-content-end" style = "display : none;" id = "none2">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="./review" id = "detail">Review</a>
+			    <a class="nav-link" aria-current="page" href="#">Review</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="qna" id = "detail">Q&A</a>
+			    <a class="nav-link" href="#">Q&A</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#" id = "detail">FAQ</a>
+			    <a class="nav-link" href="#">FAQ</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" id = "detail">Disabled</a>
+			    <a class="nav-link">Disabled</a>
 			  </li>
 			</ul>
 	  </li>
@@ -87,22 +102,22 @@ font-size: 55px;
 	    	<ul class="nav justify-content-end" style = "display : none;" id = "none3">
 	    	<c:if test = "${userinfo == null}">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="./login" id = "detail">Login</a>
+			    <a class="nav-link" aria-current="page" href="#">Login</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#" id = "detail">Sign in</a>
+			    <a class="nav-link" href="#">Sign in</a>
 			  </li>
 			</c:if>
 			<c:if test = "${userinfo != null }">
 			  <li class="nav-item">
-			    <a class="nav-link" aria-current="page" href="./logout" id = "detail">Logout</a>
+			    <a class="nav-link" aria-current="page" href="#">Logout</a>
 			  </li>
 			</c:if>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#" id = "detail">My page</a>
+			    <a class="nav-link" href="#">My page</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" id = "detail">Disabled</a>
+			    <a class="nav-link">Disabled</a>
 			  </li>
 			</ul>
 	  </li>
@@ -114,36 +129,46 @@ font-size: 55px;
   </header>
 </div>
 <br><br>
-
-
-<main class = "container">
-	<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-	  <div class="carousel-inner">
-	    <div class="carousel-item active" data-bs-interval="2000">
-	      <img src="./resources/1.jpg" class="d-block w-100" alt="...">
-	    </div>
-	    <div class="carousel-item" data-bs-interval="2000">
-	      <img src="./resources/2.jpg" class="d-block w-100" alt="...">
-	    </div>
-	    <div class="carousel-item" data-bs-interval="2000">
-	      <img src="./resources/3.jpeg" class="d-block w-100" alt="...">
-	    </div>
-	  </div>
-	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	    <span class="visually-hidden">Previous</span>
-	  </button>
-	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	    <span class="visually-hidden">Next</span>
-	  </button>
-	</div>
-	
-	<div class = "row-mb-2" style = "height:500px;">
-		<div class = "col-6">
-		
+<!-- main 안에다가 주 내용 작성할것 -->
+<main class = "container p-5">
+	<div class = "container">
+		<div class = "page-title">
+			<h1>Review Board</h1>
 		</div>
+	</div>
+	<div class = "container" id = "boardList">
+		<div class = "row">
+			<table id=tblData class ="text-center">
+				<tr class ="text-center">
+					<th>번호</th>
+					<th>제목</th>
+					<th>글쓴이</th>
+					<th>날짜</th>
+					<th>조회</th>
+					<th>추천순</th>
+				</tr>
 	
+			</table>
+			<!-- 여기에 이제 1페이지부터 클릭할 수 있는거 넣을 생각 -->
+			
+			<p></p>
+			<p></p>		
+			<p></p>
+			<div class = "col-2">
+				<input class="form-control form-control-sm" type="text" placeholder="글 제목 검색" aria-label=".form-control-sm example">
+			</div>
+			<div class = "col-1 text-left">
+                <button type="button" class="btn btn-outline-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+					  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				  </svg>
+                  <span class="visually-hidden">Button</span>
+                </button>
+			</div>
+			<div class = "col-9 text-end">
+				<button type="button" class="btn btn-outline-primary btn-sm">글쓰기</button>
+			</div>
+		</div>
 	</div>
 </main>
 
@@ -172,6 +197,7 @@ font-size: 55px;
 <script>
 $(document)
 .ready(function () {
+	showReview();
 	console.log("시작 화면");
 	$("#nav1").hover(function() {
 		$("#none1").css("display", "block");
@@ -203,7 +229,29 @@ $(document)
 		$("#none1").css("display", "none")
 		$("#none2").css("display", "none");
 		$("#none3").css("display", "none");
-	})	
+	})
+function showReview() {
+		$.ajax({
+			url:'reviewList',
+			data:'',
+			dataType:'json',
+			type:'get',
+			beforeSend:function() {
+				$('#tblData tr:gt(0)').remove();
+			},
+			success:function(data) {
+				for(let i=0; i<data.length; i++) {
+					reviewitem=data[i];
+					let str='<tr><td>'+reviewitem['id']+'</td><td>'+reviewitem['title']+
+						'</td><td>'+reviewitem['user_id']+'</td><td>'+reviewitem['postdate']+
+						'</td><td>'+reviewitem['views']+'</td><td>'+reviewitem['heart']+'</td></tr>';
+					$('#tblData').append(str);
+					}
+			},
+			error:function() { },
+			complete:function() { }
+		})
+	}
 })
 </script>
 </html>
