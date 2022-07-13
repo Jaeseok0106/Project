@@ -54,4 +54,7 @@ public class ArtistController {
 		}
 		return null;
 	}
+	public String aaa() {
+		return null;
+	}
 }
